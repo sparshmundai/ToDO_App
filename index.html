@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/w3.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+  <body>
+    <nav class="w3-sidebar w3-bar-block w3-card w3-top" id="mySidebar">
+      <div class="w3-container">
+        <span
+          
+          class="w3-btn w3-display-topright w3-large close-btn"
+          >X</span
+        >
+        <div class="w3-padding w3-center">
+          <img
+            class="w3-circle"
+            src="images/icons8-linkedin-circled-48.png"
+            alt="profile_image"
+            style="width: 75%"
+          />
+        </div>
+        <a class="w3-bar-item w3-button" href="#">Movies</a>
+        <a class="w3-bar-item w3-button" href="#">Friends</a>
+        <a class="w3-bar-item w3-button" href="#">Messages</a>
+      </div>
+    </nav>
+
+    <header class="w3-top">
+      <div class="w3-card title-header">
+        <div class="logo w3-margin-left">
+          <button
+            class="w3-large w3-button w3-hide-large open-btn"
+            
+          >
+            &#9776;
+          </button>
+          <h1>Todo App</h1>
+        </div>
+
+        <div class="w3-margin-right">
+          <label class="change-mode">
+            <input type="checkbox" id="check_input"/>
+            <span class="mode round"></span>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="w3-orange w3-bottom w3-margin w3-card-4 w3-container w3-display-container w3-circle add"
+      onclick="document.getElementById('101').style.display = 'block'"
+    >
+      <span class="w3-xlarge w3-text-white w3-display-middle" id ="showmodel">+</span>
+    </div>
+
+    <div class="w3-modal w3-card-2 w3-animate-zoom" id="101">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+         <div class="w3-container w3-margin-top">
+           <textarea name="notes" id="notes" class="notes"  style="min-height: 30rem; min-width: 100%; overflow: auto; padding: 2rem;"></textarea>
+         </div>
+       
+          <div class="w3-container w3-margin-bottom w3-center">
+            <button class="w3-button w3-blue save">Save</button>
+            <button class="w3-button w3-red cancel"  onclick="document.getElementById('101').style.display='none'">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-container container">
+      <div class="w3-row-padding w3-content"></div>
+    </div>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+  </body>
+</html>

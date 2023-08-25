@@ -1,0 +1,141 @@
+:root {
+  --doc-height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+.title-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: rgb(255, 255, 255);
+  z-index: 20 !important;
+  gap: 1rem;
+}
+
+.title-header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title-header .w3-bar-item {
+  cursor: pointer;
+}
+
+.w3-sidebar {
+  width: 0;
+  transition: all 0.5s;
+  z-index: 150 !important;
+ overflow-y: scroll;
+  height: 100vh;
+}
+
+.change-mode {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.change-mode input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.mode {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.mode:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .mode {
+  background-color: #2196f3;
+}
+
+input:focus + .mode {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .mode:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.mode.round {
+  border-radius: 34px;
+}
+
+.mode.round:before {
+  border-radius: 50%;
+}
+
+.title-header .w3-button:hover {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.w3-container .useBox {
+  height: 9.75rem;
+  padding: 5px;
+  margin: 0.8rem 0.2rem;
+  cursor: pointer;
+}
+
+.container {
+  margin-top: 8rem;
+}
+
+.w3-bottom {
+  width: 50px !important;
+  height: 50px;
+  right: 0;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.w3-bottom:active {
+  box-shadow: inset 0 5px 5px rgba(211, 201, 201, 0.2);
+}
+
+.dots:after {
+  content: "\2807";
+  font-size: 18px;
+  padding: 8px 3px;
+}
+
+.container .useBox .day {
+  font-weight: 600;
+}
+
+.add {
+  margin-bottom: 1.5rem !important;
+  margin-right: 2rem !important;
+}
+
+
+
